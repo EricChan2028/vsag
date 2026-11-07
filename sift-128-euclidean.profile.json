@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-57-gd9d62cef"
+    "vsag_version": "v1.1.0-62-gef91886b"
   },
   "input": {
     "file_name": "sift-128-euclidean.hdf5",
@@ -83,22 +83,22 @@
         "definition": "L2 norm of every row with finite values.",
         "summary": {
           "count": 1000000,
-          "min": 506.3171081542969,
-          "max": 511.3531188964844,
-          "mean": 508.6432539541333,
-          "std": 0.6585748862905262,
-          "p01": 507.310546875,
-          "p05": 507.6238708496094,
-          "p25": 508.1564636230469,
-          "p50": 508.61083984375,
-          "p75": 509.0992126464844,
-          "p95": 509.7715148925781,
-          "p99": 510.21368408203125
+          "min": 506.3170943193603,
+          "max": 511.3531069623025,
+          "mean": 508.6432538794294,
+          "std": 0.6585749437578543,
+          "p01": 507.3105557742713,
+          "p05": 507.62387650700595,
+          "p25": 508.1564719650828,
+          "p50": 508.6108532070467,
+          "p75": 509.09920447786993,
+          "p95": 509.77151744678713,
+          "p99": 510.2136807260268
         },
         "histogram": {
-          "lower": 506.3171081542969,
-          "upper": 511.3531188964844,
-          "bin_width": 0.10072021484375,
+          "lower": 506.3170943193603,
+          "upper": 511.3531069623025,
+          "bin_width": 0.10072025285884365,
           "counts": [
             4,
             6,
@@ -155,14 +155,14 @@
           "above": 0,
           "clipped": false
         },
-        "coefficient_of_variation": 0.0012947677594676464,
+        "coefficient_of_variation": 0.0012947678726394065,
         "zero_norm_rows": 0,
         "unit_norm_ratio": 0.0,
         "unit_norm_tolerance": 0.001,
         "outliers": {
           "method": "Tukey far-out fences: Q1 - 3*IQR, Q3 + 3*IQR",
-          "lower_fence": 505.3282165527344,
-          "upper_fence": 511.9274597167969,
+          "lower_fence": 505.3282744267214,
+          "upper_fence": 511.9274020162313,
           "low": 0,
           "high": 0,
           "ratio": 0.0,
@@ -208,7 +208,7 @@
             30,
             29
           ],
-          "mean_vector_norm_ratio": 0.6488943899467573
+          "mean_vector_norm_ratio": 0.6488943900420597
         },
         "per_dimension": {
           "mean": [
@@ -1714,7 +1714,7 @@
         },
         "mean_vector_norm_ratio": {
           "scope": "full",
-          "value": 0.6488943899467573
+          "value": 0.6488943900420597
         },
         "pca_top1_ratio": {
           "scope": "sample",
@@ -12320,48 +12320,49 @@
           1.0,
           42.0
         ],
+        "scoring": "As in VSAG: sq8 and sq4 compare fp32 queries with decoded rows; fp16, bf16 and the uniform quantizers encode queries too; uniform ip and cosine scores add code products to the stored sums of the original values. code_bytes_per_vector includes the stored metadata and alignment.",
         "schemes": {
           "fp16": {
             "bits_per_dim": 16.0,
-            "code_bytes_per_vector": 256.0,
-            "encodes_query": false,
+            "code_bytes_per_vector": 256,
+            "encodes_query": true,
             "recall_at_k": 1.0,
             "mean_relative_reconstruction_error": 0.0
           },
           "bf16": {
             "bits_per_dim": 16.0,
-            "code_bytes_per_vector": 256.0,
-            "encodes_query": false,
+            "code_bytes_per_vector": 256,
+            "encodes_query": true,
             "recall_at_k": 1.0,
             "mean_relative_reconstruction_error": 0.0
           },
           "sq8": {
             "bits_per_dim": 8.0,
-            "code_bytes_per_vector": 128.0,
+            "code_bytes_per_vector": 128,
             "encodes_query": false,
             "recall_at_k": 0.9900000000000001,
             "mean_relative_reconstruction_error": 0.006723035523327793
           },
           "sq4": {
             "bits_per_dim": 4.0,
-            "code_bytes_per_vector": 64.0,
+            "code_bytes_per_vector": 64,
             "encodes_query": false,
             "recall_at_k": 0.8395000000000016,
             "mean_relative_reconstruction_error": 0.12533399537490883
           },
           "sq8_uniform": {
             "bits_per_dim": 8.0,
-            "code_bytes_per_vector": 128.0,
+            "code_bytes_per_vector": 136,
             "encodes_query": true,
             "recall_at_k": 0.9900000000000003,
-            "mean_relative_reconstruction_error": 0.007954584696330704
+            "mean_relative_reconstruction_error": 0.007954602060574372
           },
           "sq4_uniform": {
             "bits_per_dim": 4.0,
-            "code_bytes_per_vector": 64.0,
+            "code_bytes_per_vector": 72,
             "encodes_query": true,
             "recall_at_k": 0.4435000000000002,
-            "mean_relative_reconstruction_error": 0.5566255005801343
+            "mean_relative_reconstruction_error": 0.5566255007172649
           }
         }
       }
@@ -12396,22 +12397,22 @@
         "definition": "L2 norm of every row with finite values.",
         "summary": {
           "count": 10000,
-          "min": 506.72674560546875,
-          "max": 511.134033203125,
-          "mean": 508.63748809509326,
-          "std": 0.6533089088026849,
-          "p01": 507.2967233276367,
-          "p05": 507.61895751953125,
-          "p25": 508.1564636230469,
-          "p50": 508.607421875,
-          "p75": 509.0884094238281,
-          "p95": 509.7391860961914,
-          "p99": 510.218625793457
+          "min": 506.7267508233604,
+          "max": 511.13403330242056,
+          "mean": 508.6374879885889,
+          "std": 0.6533090067430226,
+          "p01": 507.29672776385365,
+          "p05": 507.61895157686934,
+          "p25": 508.1564719650828,
+          "p50": 508.6074124506626,
+          "p75": 509.08840096784763,
+          "p95": 509.7391980218456,
+          "p99": 510.2186394083009
         },
         "histogram": {
-          "lower": 506.72674560546875,
-          "upper": 511.134033203125,
-          "bin_width": 0.088145751953125,
+          "lower": 506.7267508233604,
+          "upper": 511.13403330242056,
+          "bin_width": 0.08814564958120286,
           "counts": [
             1,
             4,
@@ -12468,14 +12469,14 @@
           "above": 0,
           "clipped": false
         },
-        "coefficient_of_variation": 0.0012844293314859725,
+        "coefficient_of_variation": 0.0012844295243092255,
         "zero_norm_rows": 0,
         "unit_norm_ratio": 0.0,
         "unit_norm_tolerance": 0.001,
         "outliers": {
           "method": "Tukey far-out fences: Q1 - 3*IQR, Q3 + 3*IQR",
-          "lower_fence": 505.3606262207031,
-          "upper_fence": 511.8842468261719,
+          "lower_fence": 505.3606849567883,
+          "upper_fence": 511.88418797614213,
           "low": 0,
           "high": 0,
           "ratio": 0.0,
@@ -12521,7 +12522,7 @@
             2,
             30
           ],
-          "mean_vector_norm_ratio": 0.6503433207349608
+          "mean_vector_norm_ratio": 0.6503433208711371
         },
         "per_dimension": {
           "mean": [
@@ -13999,7 +14000,7 @@
         },
         "mean_vector_norm_ratio": {
           "scope": "full",
-          "value": 0.6503433207349608
+          "value": 0.6503433208711371
         },
         "pca_top1_ratio": {
           "scope": "sample",
@@ -28660,7 +28661,7 @@
   },
   "ground_truth": {
     "scope": "sample",
-    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. distance_recall_at_k tolerates ties.",
+    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare stored distances with those recomputed distances.",
     "stored_queries": 10000,
     "stored_k": 100,
     "checked_queries": 1000,
@@ -28674,11 +28675,12 @@
     "status": "checked",
     "id_recall_at_k": 0.9992500000000003,
     "distance_recall_at_k": 1.0,
+    "recomputed_stored_ids": 20000,
     "best_matching_distance_convention": "euclidean (sqrt of l2sqr)",
-    "best_convention_mean_relative_error": 1.0178302420291022e-08,
+    "best_convention_mean_relative_error": 1.0178302420290961e-08,
     "convention_mean_relative_errors": {
-      "euclidean (sqrt of l2sqr)": 1.0178302420291022e-08,
-      "squared euclidean": 0.9903287882478594
+      "euclidean (sqrt of l2sqr)": 1.0178302420290961e-08,
+      "squared euclidean": 0.9903287882478615
     },
     "out_of_range_ids": 0,
     "rows_with_unsorted_distances": 0
@@ -28739,7 +28741,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "57e20b5f92495181cb89a35ce0d891b88cef05c35f83f0a49729a555e0aad581",
+    "metrics_sha256": "7679b5837b3630bd1d224d924dc1e8930e524aaf6c6984291f54ed12f3b62b09",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -28747,10 +28749,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-04T15:33:14Z",
-    "duration_seconds": 18.813211169,
+    "started_at": "2026-11-07T19:54:54Z",
+    "duration_seconds": 3.702413861,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 169844736
+    "peak_rss_bytes": 181657600
   }
 }

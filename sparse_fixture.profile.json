@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-57-gd9d62cef"
+    "vsag_version": "v1.1.0-62-gef91886b"
   },
   "input": {
     "file_name": "sparse_fixture.hdf5",
@@ -162,22 +162,22 @@
         "definition": "L2 norm of every record with finite values.",
         "summary": {
           "count": 20000,
-          "min": 1.8047006130218506,
-          "max": 40.58279037475586,
-          "mean": 4.4485390972435725,
-          "std": 1.0503027734699244,
-          "p01": 2.7143179535865785,
-          "p05": 3.1069579243659975,
-          "p25": 3.7596328258514404,
-          "p50": 4.298243045806885,
-          "p75": 4.958333730697632,
-          "p95": 6.261707139015198,
-          "p99": 7.67263431549072
+          "min": 1.8047005790341624,
+          "max": 40.58279131643163,
+          "mean": 4.448539099737818,
+          "std": 1.050302776634924,
+          "p01": 2.7143180530034727,
+          "p05": 3.106957873263595,
+          "p25": 3.7596328771943233,
+          "p50": 4.2982431615052565,
+          "p75": 4.958333709584337,
+          "p95": 6.261707120578635,
+          "p99": 7.672634529090623
         },
         "histogram": {
-          "lower": 2.5572153508663176,
-          "upper": 8.363791589736953,
-          "bin_width": 0.11613152477741272,
+          "lower": 2.5572154188641054,
+          "upper": 8.363791858074901,
+          "bin_width": 0.11613152878421591,
           "counts": [
             67,
             131,
@@ -234,7 +234,7 @@
           "above": 100,
           "clipped": true
         },
-        "coefficient_of_variation": 0.23610060527976895,
+        "coefficient_of_variation": 0.23610060585885942,
         "unit_norm_ratio": 0.0
       },
       "values": {
@@ -589,22 +589,22 @@
         "cosine_similarity": {
           "summary": {
             "count": 100000,
-            "min": 0.0032233536491683107,
-            "max": 0.8171155447254632,
-            "mean": 0.11470851590753121,
-            "std": 0.060363464125239845,
-            "p01": 0.02387026505935987,
-            "p05": 0.038640021549506826,
-            "p25": 0.07129330875079433,
-            "p50": 0.10366342400148984,
-            "p75": 0.14589667992189892,
-            "p95": 0.22777489126282438,
-            "p99": 0.30502338760926573
+            "min": 0.0032233536514953277,
+            "max": 0.8171155729594736,
+            "mean": 0.114708515801298,
+            "std": 0.060363464051328926,
+            "p01": 0.02387026376472156,
+            "p05": 0.03864002346924685,
+            "p25": 0.0712933056889587,
+            "p50": 0.10366342105211553,
+            "p75": 0.14589667579709642,
+            "p95": 0.2277748790562463,
+            "p99": 0.3050233950796562
           },
           "histogram": {
-            "lower": 0.0032233536491683107,
-            "upper": 0.8171155447254632,
-            "bin_width": 0.0162778438215259,
+            "lower": 0.0032233536514953277,
+            "upper": 0.8171155729594736,
+            "bin_width": 0.016277844386159566,
             "counts": [
               487,
               3471,
@@ -992,22 +992,22 @@
         "definition": "L2 norm of every record with finite values.",
         "summary": {
           "count": 500,
-          "min": 0.9515562057495117,
-          "max": 8.313416481018066,
-          "mean": 2.726676071166991,
-          "std": 0.993124493146739,
-          "p01": 1.2953051233291626,
-          "p05": 1.5242358922958374,
-          "p25": 2.007317304611206,
-          "p50": 2.5524080991744995,
-          "p75": 3.182854115962982,
-          "p95": 4.599960684776305,
-          "p99": 6.016042504310606
+          "min": 0.9515561957553335,
+          "max": 8.31341646499697,
+          "mean": 2.726676072688747,
+          "std": 0.9931244901003403,
+          "p01": 1.2953051145170076,
+          "p05": 1.5242358919682149,
+          "p25": 2.007317308575802,
+          "p50": 2.5524082038565297,
+          "p75": 3.1828541541667192,
+          "p95": 4.599960574841877,
+          "p99": 6.016042297094391
         },
         "histogram": {
-          "lower": 0.9515562057495117,
-          "upper": 8.313416481018066,
-          "bin_width": 0.1472372055053711,
+          "lower": 0.9515561957553335,
+          "upper": 8.31341646499697,
+          "bin_width": 0.14723720538483273,
           "counts": [
             1,
             3,
@@ -1064,7 +1064,7 @@
           "above": 0,
           "clipped": false
         },
-        "coefficient_of_variation": 0.3642253304851468,
+        "coefficient_of_variation": 0.36422532916461564,
         "unit_norm_ratio": 0.0
       },
       "values": {
@@ -1420,21 +1420,21 @@
           "summary": {
             "count": 100000,
             "min": 0.0,
-            "max": 0.8317282362240243,
-            "mean": 0.10558356465268627,
-            "std": 0.08983824752422559,
+            "max": 0.8317282136056364,
+            "mean": 0.10558356455208222,
+            "std": 0.08983824744227224,
             "p01": 0.0,
-            "p05": 0.011000609343235794,
-            "p25": 0.041389969250625595,
-            "p50": 0.08114339551388998,
-            "p75": 0.14297523913064594,
-            "p95": 0.28605706639410017,
-            "p99": 0.41648574373579966
+            "p05": 0.0110006094237997,
+            "p25": 0.04138997052791839,
+            "p50": 0.08114339869023635,
+            "p75": 0.14297523081610955,
+            "p95": 0.286057051730147,
+            "p99": 0.4164857437537335
           },
           "histogram": {
             "lower": 0.0,
-            "upper": 0.8317282362240243,
-            "bin_width": 0.016634564724480484,
+            "upper": 0.8317282136056364,
+            "bin_width": 0.01663456427211273,
             "counts": [
               8108,
               11115,
@@ -1800,7 +1800,7 @@
   },
   "ground_truth": {
     "scope": "sample",
-    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. distance_recall_at_k tolerates ties.",
+    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare stored distances with those recomputed distances.",
     "stored_queries": 500,
     "stored_k": 100,
     "checked_queries": 500,
@@ -1814,12 +1814,13 @@
     "status": "checked",
     "id_recall_at_k": 1.0,
     "distance_recall_at_k": 1.0,
+    "recomputed_stored_ids": 10000,
     "best_matching_distance_convention": "1 - similarity",
-    "best_convention_mean_relative_error": 2.1136868803604923e-08,
+    "best_convention_mean_relative_error": 2.1136868803604907e-08,
     "convention_mean_relative_errors": {
-      "1 - similarity": 2.1136868803604923e-08,
+      "1 - similarity": 2.1136868803604907e-08,
       "similarity": 1.0,
-      "negative similarity": 0.09123781024369293
+      "negative similarity": 0.09123781024369236
     },
     "out_of_range_ids": 0,
     "rows_with_unsorted_distances": 0
@@ -1877,7 +1878,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "e461426220c527a4b6c95b051df6bdd1cdfb7f3bc86ed56a87eda523b284b71f",
+    "metrics_sha256": "eb095c36f990145c504f17f0abf4baef7e092a0551b38418551d35677051f281",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -1885,10 +1886,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-04T15:34:08Z",
-    "duration_seconds": 1.423097289,
+    "started_at": "2026-11-07T19:55:37Z",
+    "duration_seconds": 0.192319885,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 55218176
+    "peak_rss_bytes": 59924480
   }
 }

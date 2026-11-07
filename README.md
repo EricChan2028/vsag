@@ -34,4 +34,5 @@ memory), and `determinism.metrics_sha256` stays the same for any thread count or
 The `sparse_fixture` file is synthetic: 20,000 Zipf-distributed records over a 30,000-term
 vocabulary with 500 queries and exact ground truth.
 
-Generated with commit `d9d62cefa3b6`, GCC 13.4, release build.
+Generated with commit `ef91886b21ad` in the VSAG CI image (`vsaglib/vsag:ci-main-openblas`,
+GCC 13.4), release build, 24 OpenMP threads.

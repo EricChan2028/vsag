@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-57-gd9d62cef"
+    "vsag_version": "v1.1.0-62-gef91886b"
   },
   "input": {
     "file_name": "glove-100-angular.hdf5",
@@ -83,22 +83,22 @@
         "definition": "L2 norm of every row with finite values.",
         "summary": {
           "count": 1183514,
-          "min": 0.04109325259923935,
-          "max": 18.67624855041504,
-          "mean": 5.728642067287591,
-          "std": 1.1505146488117561,
-          "p01": 3.691790645122528,
-          "p05": 4.214059662818909,
-          "p25": 4.9584338665008545,
-          "p50": 5.547027349472046,
-          "p75": 6.284107208251953,
-          "p95": 7.944765543937681,
-          "p99": 9.289906883239732
+          "min": 0.04109325420947355,
+          "max": 18.67624857209639,
+          "mean": 5.7286420673101395,
+          "std": 1.1505146486565587,
+          "p01": 3.69179055240866,
+          "p05": 4.214059563030736,
+          "p25": 4.9584337018592,
+          "p50": 5.547027493752353,
+          "p75": 6.28410723390815,
+          "p95": 7.94476542128052,
+          "p99": 9.289906516078238
         },
         "histogram": {
-          "lower": 0.04109325259923935,
-          "upper": 18.67624855041504,
-          "bin_width": 0.372703105956316,
+          "lower": 0.04109325420947355,
+          "upper": 18.67624857209639,
+          "bin_width": 0.37270310635773835,
           "counts": [
             49,
             30,
@@ -155,37 +155,37 @@
           "above": 0,
           "clipped": false
         },
-        "coefficient_of_variation": 0.20083549212850438,
+        "coefficient_of_variation": 0.2008354921006224,
         "zero_norm_rows": 0,
         "unit_norm_ratio": 0.0,
         "unit_norm_tolerance": 0.001,
         "outliers": {
           "method": "Tukey far-out fences: Q1 - 3*IQR, Q3 + 3*IQR",
-          "lower_fence": 0.9814138412475586,
-          "upper_fence": 10.261127233505249,
+          "lower_fence": 0.9814131057123507,
+          "upper_fence": 10.261127830054999,
           "low": 87,
           "high": 3356,
           "ratio": 0.0029091333097876326,
           "examples": [
             {
               "row": 1000457,
-              "norm": 18.67624855041504
+              "norm": 18.67624857209639
             },
             {
               "row": 930821,
-              "norm": 17.654035568237305
+              "norm": 17.654036220537407
             },
             {
               "row": 1011664,
-              "norm": 17.031415939331055
+              "norm": 17.031415797202744
             },
             {
               "row": 396589,
-              "norm": 16.75235366821289
+              "norm": 16.752353376306534
             },
             {
               "row": 753062,
-              "norm": 16.42978286743164
+              "norm": 16.429782234184707
             }
           ]
         }
@@ -229,7 +229,7 @@
             4,
             46
           ],
-          "mean_vector_norm_ratio": 0.3421188410977246
+          "mean_vector_norm_ratio": 0.342118841096378
         },
         "per_dimension": {
           "mean": [
@@ -1426,7 +1426,7 @@
         },
         "mean_vector_norm_ratio": {
           "scope": "full",
-          "value": 0.3421188410977246
+          "value": 0.342118841096378
         },
         "pca_top1_ratio": {
           "scope": "sample",
@@ -12032,48 +12032,49 @@
           -0.038263577967882156,
           0.07901830226182938
         ],
+        "scoring": "As in VSAG: sq8 and sq4 compare fp32 queries with decoded rows; fp16, bf16 and the uniform quantizers encode queries too; uniform ip and cosine scores add code products to the stored sums of the original values. code_bytes_per_vector includes the stored metadata and alignment.",
         "schemes": {
           "fp16": {
             "bits_per_dim": 16.0,
-            "code_bytes_per_vector": 200.0,
-            "encodes_query": false,
-            "recall_at_k": 0.9995,
+            "code_bytes_per_vector": 200,
+            "encodes_query": true,
+            "recall_at_k": 0.9990000000000001,
             "mean_relative_reconstruction_error": 0.00020640957145329154
           },
           "bf16": {
             "bits_per_dim": 16.0,
-            "code_bytes_per_vector": 200.0,
-            "encodes_query": false,
+            "code_bytes_per_vector": 200,
+            "encodes_query": true,
             "recall_at_k": 0.9990000000000001,
             "mean_relative_reconstruction_error": 0.0016487064386906368
           },
           "sq8": {
             "bits_per_dim": 8.0,
-            "code_bytes_per_vector": 100.0,
+            "code_bytes_per_vector": 100,
             "encodes_query": false,
             "recall_at_k": 0.9830000000000005,
-            "mean_relative_reconstruction_error": 0.01565839010639581
+            "mean_relative_reconstruction_error": 0.015658063518811324
           },
           "sq4": {
             "bits_per_dim": 4.0,
-            "code_bytes_per_vector": 50.0,
+            "code_bytes_per_vector": 50,
             "encodes_query": false,
-            "recall_at_k": 0.7930000000000007,
-            "mean_relative_reconstruction_error": 0.19921388754848687
+            "recall_at_k": 0.7915000000000006,
+            "mean_relative_reconstruction_error": 0.199170502266672
           },
           "sq8_uniform": {
             "bits_per_dim": 8.0,
-            "code_bytes_per_vector": 100.0,
+            "code_bytes_per_vector": 104,
             "encodes_query": true,
-            "recall_at_k": 0.9560000000000014,
-            "mean_relative_reconstruction_error": 0.030656030679853046
+            "recall_at_k": 0.8200000000000012,
+            "mean_relative_reconstruction_error": 0.030656223694158057
           },
           "sq4_uniform": {
             "bits_per_dim": 4.0,
-            "code_bytes_per_vector": 50.0,
+            "code_bytes_per_vector": 80,
             "encodes_query": true,
-            "recall_at_k": 0.3304999999999999,
-            "mean_relative_reconstruction_error": 0.6067240157204625
+            "recall_at_k": 0.1610000000000001,
+            "mean_relative_reconstruction_error": 0.6067224199909159
           }
         }
       }
@@ -12108,22 +12109,22 @@
         "definition": "L2 norm of every row with finite values.",
         "summary": {
           "count": 10000,
-          "min": 1.1085176467895508,
-          "max": 17.091859817504883,
-          "mean": 5.721641880011548,
-          "std": 1.1612021002030484,
-          "p01": 3.7037124276161193,
-          "p05": 4.211149525642395,
-          "p25": 4.948576211929321,
-          "p50": 5.534534454345703,
-          "p75": 6.27374529838562,
-          "p95": 7.967609357833861,
-          "p99": 9.306191692352295
+          "min": 1.1085176579941494,
+          "max": 17.09185934791579,
+          "mean": 5.721641879664445,
+          "std": 1.1612021020156105,
+          "p01": 3.7037123734408053,
+          "p05": 4.21114931904986,
+          "p25": 4.948576200158368,
+          "p50": 5.534534550515085,
+          "p75": 6.273745154552803,
+          "p95": 7.967609288553563,
+          "p99": 9.306191512286407
         },
         "histogram": {
-          "lower": 1.1085176467895508,
-          "upper": 17.091859817504883,
-          "bin_width": 0.3196668434143066,
+          "lower": 1.1085176579941494,
+          "upper": 17.09185934791579,
+          "bin_width": 0.3196668337984328,
           "counts": [
             1,
             0,
@@ -12180,37 +12181,37 @@
           "above": 0,
           "clipped": false
         },
-        "coefficient_of_variation": 0.20294910526638985,
+        "coefficient_of_variation": 0.20294910559549229,
         "zero_norm_rows": 0,
         "unit_norm_ratio": 0.0,
         "unit_norm_tolerance": 0.001,
         "outliers": {
           "method": "Tukey far-out fences: Q1 - 3*IQR, Q3 + 3*IQR",
-          "lower_fence": 0.9730689525604248,
-          "upper_fence": 10.249252557754517,
+          "lower_fence": 0.9730693369750627,
+          "upper_fence": 10.249252017736108,
           "low": 0,
           "high": 29,
           "ratio": 0.0029,
           "examples": [
             {
               "row": 3229,
-              "norm": 17.091859817504883
+              "norm": 17.09185934791579
             },
             {
               "row": 1470,
-              "norm": 14.51738452911377
+              "norm": 14.517384103022506
             },
             {
               "row": 8849,
-              "norm": 14.32295036315918
+              "norm": 14.322950195622077
             },
             {
               "row": 4828,
-              "norm": 13.267366409301758
+              "norm": 13.267366465881619
             },
             {
               "row": 4362,
-              "norm": 12.198088645935059
+              "norm": 12.198088458885547
             }
           ]
         }
@@ -12254,7 +12255,7 @@
             47,
             36
           ],
-          "mean_vector_norm_ratio": 0.34416880668672384
+          "mean_vector_norm_ratio": 0.3441688067076028
         },
         "per_dimension": {
           "mean": [
@@ -13451,7 +13452,7 @@
         },
         "mean_vector_norm_ratio": {
           "scope": "full",
-          "value": 0.34416880668672384
+          "value": 0.3441688067076028
         },
         "pca_top1_ratio": {
           "scope": "sample",
@@ -28112,7 +28113,7 @@
   },
   "ground_truth": {
     "scope": "sample",
-    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. distance_recall_at_k tolerates ties.",
+    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare stored distances with those recomputed distances.",
     "stored_queries": 10000,
     "stored_k": 100,
     "checked_queries": 1000,
@@ -28126,11 +28127,12 @@
     "status": "checked",
     "id_recall_at_k": 1.0,
     "distance_recall_at_k": 1.0,
+    "recomputed_stored_ids": 20000,
     "best_matching_distance_convention": "1 - similarity",
-    "best_convention_mean_relative_error": 1.0491068857514152e-08,
+    "best_convention_mean_relative_error": 1.04910688575142e-08,
     "convention_mean_relative_errors": {
-      "1 - similarity": 1.0491068857514152e-08,
-      "similarity": 0.22522132711065854,
+      "1 - similarity": 1.04910688575142e-08,
+      "similarity": 0.22522132711065898,
       "negative similarity": 1.0
     },
     "out_of_range_ids": 0,
@@ -28180,7 +28182,7 @@
     {
       "id": "train.uniform_range_loss",
       "severity": "notice",
-      "message": "Simulated sq8_uniform recall@k (0.956) trails per-dimension sq8 (0.983); one global range costs recall here, so a rotation (tq chain rom/fht) is a candidate to evaluate.",
+      "message": "Simulated sq8_uniform recall@k (0.820) trails per-dimension sq8 (0.983); one global range costs recall here, so a rotation (tq chain rom/fht) is a candidate to evaluate.",
       "evidence": [
         "splits.train.quantization.schemes.sq8.recall_at_k",
         "splits.train.quantization.schemes.sq8_uniform.recall_at_k"
@@ -28209,7 +28211,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "b6750ae6e4cf4bc933069878faa45d3fa89d8e15e5b926728acb53ce127e1d47",
+    "metrics_sha256": "5f237491aec687009f40da8f4c612049736016e5deb1b7e540ef11e1f2001020",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -28217,10 +28219,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-04T15:33:33Z",
-    "duration_seconds": 22.756089501,
+    "started_at": "2026-11-07T19:55:19Z",
+    "duration_seconds": 3.128988237,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 182763520
+    "peak_rss_bytes": 200302592
   }
 }
