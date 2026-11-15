@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-105-g2d9890da"
+    "vsag_version": "v1.1.0-108-g008c5373"
   },
   "input": {
     "file_name": "glove-100-angular.hdf5",
@@ -12039,7 +12039,7 @@
             "code_bytes_per_vector": 200,
             "encodes_query": true,
             "recall_at_k": 0.9990000000000001,
-            "mean_relative_reconstruction_error": 0.00020640957145329154
+            "mean_relative_reconstruction_error": 0.0004121432454321816
           },
           "bf16": {
             "bits_per_dim": 16.0,
@@ -24059,7 +24059,8 @@
         "p75": 0.009914485967823437,
         "p95": 0.017008939099466273,
         "p99": 0.021493757134289106
-      }
+      },
+      "shifted_constant_dimensions": 0
     },
     "query_first_neighbor_distance": {
       "scope": "sample",
@@ -28213,7 +28214,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "e06f1be0071dc5830a18b68ab0590a1f99cf5521e36e173d42bb728ebf3f5259",
+    "metrics_sha256": "f835c2435d99978bd575922aed4b18909e8af12b4a5078ffde0ee4ed09761226",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -28221,10 +28222,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-15T07:20:03Z",
-    "duration_seconds": 4.069666171,
+    "started_at": "2026-11-15T10:38:02Z",
+    "duration_seconds": 2.843189267,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 200249344
+    "peak_rss_bytes": 191397888
   }
 }

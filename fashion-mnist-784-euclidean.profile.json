@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-105-g2d9890da"
+    "vsag_version": "v1.1.0-108-g008c5373"
   },
   "input": {
     "file_name": "fashion-mnist-784-euclidean.hdf5",
@@ -17539,7 +17539,7 @@
             "code_bytes_per_vector": 1568,
             "encodes_query": true,
             "recall_at_k": 1.0,
-            "mean_relative_reconstruction_error": 0.0
+            "mean_relative_reconstruction_error": 4.461596447218621e-07
           },
           "bf16": {
             "bits_per_dim": 16.0,
@@ -35059,7 +35059,8 @@
         "p75": 0.010275630700814907,
         "p95": 0.017417528152409663,
         "p99": 0.022016631426660948
-      }
+      },
+      "shifted_constant_dimensions": 0
     },
     "query_first_neighbor_distance": {
       "scope": "sample",
@@ -39224,7 +39225,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "a6387f5a4795e391a0d49042322762679b42bb6bc0b71dc10ba2a6811d778203",
+    "metrics_sha256": "1dbaa3065606bf6d61d59434b6f7ced9ddae5cb27a0fd758de794f1ff1b8ca6d",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -39232,10 +39233,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-15T07:19:21Z",
-    "duration_seconds": 3.17550783,
+    "started_at": "2026-11-15T10:37:23Z",
+    "duration_seconds": 2.860428185,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 205828096
+    "peak_rss_bytes": 205762560
   }
 }

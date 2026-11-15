@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-105-g2d9890da"
+    "vsag_version": "v1.1.0-108-g008c5373"
   },
   "input": {
     "file_name": "sparse_fixture.hdf5",
@@ -1880,7 +1880,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "5d0d633cc16a0d96d4ba901a91537c25718b46d63cc62380545bc7a05731dfa9",
+    "metrics_sha256": "5d55a77352b731652431cfd3bb949493bdf5a139e2786691c28f61da28f7d9ba",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -1888,10 +1888,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-15T07:20:23Z",
-    "duration_seconds": 0.174355247,
+    "started_at": "2026-11-15T10:38:19Z",
+    "duration_seconds": 0.164531994,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 60203008
+    "peak_rss_bytes": 59813888
   }
 }

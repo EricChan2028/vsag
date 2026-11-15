@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-105-g2d9890da"
+    "vsag_version": "v1.1.0-108-g008c5373"
   },
   "input": {
     "file_name": "sift-128-euclidean.hdf5",
@@ -12327,7 +12327,7 @@
             "code_bytes_per_vector": 256,
             "encodes_query": true,
             "recall_at_k": 1.0,
-            "mean_relative_reconstruction_error": 0.0
+            "mean_relative_reconstruction_error": 6.291415901549373e-07
           },
           "bf16": {
             "bits_per_dim": 16.0,
@@ -24607,7 +24607,8 @@
         "p75": 0.013994164176436638,
         "p95": 0.022509668433606852,
         "p99": 0.030351461515254342
-      }
+      },
+      "shifted_constant_dimensions": 0
     },
     "query_first_neighbor_distance": {
       "scope": "sample",
@@ -28743,7 +28744,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "d0849ee6e62ea7448a690271ad9875b6b7e3e113c1e8044dbe39969bbbea96b6",
+    "metrics_sha256": "270cfa40e00bc965ab9c9eeb3883a6b26af78314268fabf4011c6c5e46f9668b",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -28751,10 +28752,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-15T07:19:37Z",
-    "duration_seconds": 4.622934849,
+    "started_at": "2026-11-15T10:37:38Z",
+    "duration_seconds": 3.602655991,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 181305344
+    "peak_rss_bytes": 173252608
   }
 }
