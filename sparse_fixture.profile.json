@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-62-gef91886b"
+    "vsag_version": "v1.1.0-105-g2d9890da"
   },
   "input": {
     "file_name": "sparse_fixture.hdf5",
@@ -666,7 +666,7 @@
       },
       "nearest_neighbors": {
         "scope": "sample",
-        "definition": "Exact k nearest neighbors of sampled records searched in the full split through an inverted index; records sharing no term have distance 1.",
+        "definition": "Exact k nearest neighbors of sampled records searched in the full split through an inverted index; records sharing no term have distance 1, and records with non-finite values or repeated term ids are excluded.",
         "sample": {
           "method": "uniform without replacement (Floyd), seeded shuffle prefix",
           "population": 20000,
@@ -1496,7 +1496,7 @@
       },
       "nearest_neighbors": {
         "scope": "sample",
-        "definition": "Exact k nearest neighbors of sampled records searched in the full split through an inverted index; records sharing no term have distance 1.",
+        "definition": "Exact k nearest neighbors of sampled records searched in the full split through an inverted index; records sharing no term have distance 1, and records with non-finite values or repeated term ids are excluded.",
         "sample": {
           "method": "uniform without replacement (Floyd), seeded shuffle prefix",
           "population": 500,
@@ -1800,7 +1800,7 @@
   },
   "ground_truth": {
     "scope": "sample",
-    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare stored distances with those recomputed distances.",
+    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts distinct stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare finite stored distances with those recomputed distances.",
     "stored_queries": 500,
     "stored_k": 100,
     "checked_queries": 500,
@@ -1815,6 +1815,8 @@
     "id_recall_at_k": 1.0,
     "distance_recall_at_k": 1.0,
     "recomputed_stored_ids": 10000,
+    "repeated_stored_ids": 0,
+    "non_finite_stored_distances": 0,
     "best_matching_distance_convention": "1 - similarity",
     "best_convention_mean_relative_error": 2.1136868803604907e-08,
     "convention_mean_relative_errors": {
@@ -1878,7 +1880,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "eb095c36f990145c504f17f0abf4baef7e092a0551b38418551d35677051f281",
+    "metrics_sha256": "5d0d633cc16a0d96d4ba901a91537c25718b46d63cc62380545bc7a05731dfa9",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -1886,10 +1888,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-07T19:55:37Z",
-    "duration_seconds": 0.192319885,
+    "started_at": "2026-11-15T07:20:23Z",
+    "duration_seconds": 0.174355247,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 59924480
+    "peak_rss_bytes": 60203008
   }
 }

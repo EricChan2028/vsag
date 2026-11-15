@@ -3,7 +3,7 @@
   "schema_version": "1.0",
   "generator": {
     "tool": "profile_dataset",
-    "vsag_version": "v1.1.0-62-gef91886b"
+    "vsag_version": "v1.1.0-105-g2d9890da"
   },
   "input": {
     "file_name": "glove-100-angular.hdf5",
@@ -28113,7 +28113,7 @@
   },
   "ground_truth": {
     "scope": "sample",
-    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare stored distances with those recomputed distances.",
+    "definition": "Stored /neighbors and /distances of sampled queries compared with exact neighbors recomputed under the profiled metric. The distance of every stored id is recomputed: distance_recall_at_k counts distinct stored ids within the exact k-th distance (so ties are tolerated), and the convention errors compare finite stored distances with those recomputed distances.",
     "stored_queries": 10000,
     "stored_k": 100,
     "checked_queries": 1000,
@@ -28128,6 +28128,8 @@
     "id_recall_at_k": 1.0,
     "distance_recall_at_k": 1.0,
     "recomputed_stored_ids": 20000,
+    "repeated_stored_ids": 0,
+    "non_finite_stored_distances": 0,
     "best_matching_distance_convention": "1 - similarity",
     "best_convention_mean_relative_error": 1.04910688575142e-08,
     "convention_mean_relative_errors": {
@@ -28211,7 +28213,7 @@
     }
   ],
   "determinism": {
-    "metrics_sha256": "5f237491aec687009f40da8f4c612049736016e5deb1b7e540ef11e1f2001020",
+    "metrics_sha256": "e06f1be0071dc5830a18b68ab0590a1f99cf5521e36e173d42bb728ebf3f5259",
     "excluded_sections": [
       "run",
       "ai_analysis"
@@ -28219,10 +28221,10 @@
     "definition": "SHA-256 of every section except run and ai_analysis. Identical inputs, options and seed give the same digest for any thread count or chunk size."
   },
   "run": {
-    "started_at": "2026-11-07T19:55:19Z",
-    "duration_seconds": 3.128988237,
+    "started_at": "2026-11-15T07:20:03Z",
+    "duration_seconds": 4.069666171,
     "threads": 24,
     "chunk_mb": 64,
-    "peak_rss_bytes": 200302592
+    "peak_rss_bytes": 200249344
   }
 }
